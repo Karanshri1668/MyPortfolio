@@ -1,0 +1,85 @@
+/* ===========================
+        NAVBAR
+=========================== */
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: .4s ease;
+}
+
+.navbar.active{
+    backdrop-filter: blur(18px);
+    background: rgba(12,12,12,.75);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar .container{
+    height:85px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+    font-family:"Space Grotesk",sans-serif;
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+.nav-links{
+    display:flex;
+    gap:45px;
+}
+
+.nav-links a{
+    color:var(--gray);
+    transition:.3s;
+    position:relative;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+.nav-links a::after{
+
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+
+    width:0%;
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.35s;
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+.menu-btn{
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    transition: .3s;
+}
+
+.menu-overlay{
+    display: none;
+}
+

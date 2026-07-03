@@ -1,0 +1,25 @@
+:root{
+
+    --bg:#090909;
+
+    --bg2:#121212;
+
+    --card:#171717;
+
+    --border:#2a2a2a;
+
+    --primary:#7C5CFC;
+
+    --secondary:#00D4FF;
+
+    --white:#ffffff;
+
+    --gray:#B9B9B9;
+
+    --radius:18px;
+
+    --transition:.35s;
+
+    --container:1300px;
+
+}

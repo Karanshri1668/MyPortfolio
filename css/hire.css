@@ -1,0 +1,322 @@
+.hire{
+
+padding:140px 0;
+
+}
+
+.hire-wrapper{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+.hire-left h2{
+
+font-size:3.5rem;
+
+margin:20px 0;
+
+line-height:1.2;
+
+}
+
+.hire-left p{
+
+color:var(--gray);
+
+line-height:1.8;
+
+margin-bottom:40px;
+
+}
+
+.hire-buttons{
+
+display:flex;
+
+gap:20px;
+
+}
+
+.hire-right{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+}
+
+.hire-card{
+
+padding:35px;
+
+background:#151515;
+
+border-radius:22px;
+
+border:1px solid rgba(255,255,255,.05);
+
+transition:.35s;
+
+}
+
+.hire-card:hover{
+
+transform:translateY(-10px);
+
+border-color:var(--primary);
+
+}
+
+.hire-card span{
+
+font-size:2rem;
+
+display:block;
+
+margin-bottom:20px;
+
+}
+
+.hire-card h3{
+
+margin-bottom:12px;
+
+}
+
+.hire-card p{
+
+color:var(--gray);
+
+line-height:1.7;
+
+}
+
+.status{
+
+display:inline-block;
+
+width:12px;
+
+height:12px;
+
+background:#00ff66;
+
+border-radius:50%;
+
+margin-right:10px;
+
+box-shadow:0 0 15px #00ff66;
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:scale(1.4);
+
+opacity:.6;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+.social-links{
+
+margin-top:70px;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+.social-links a{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:15px;
+
+padding:22px;
+
+background:#151515;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.06);
+
+transition:.35s;
+
+font-size:1rem;
+
+font-weight:600;
+
+}
+
+.social-links a:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--primary);
+
+background:rgba(124,92,252,.08);
+
+}
+
+.social-links i{
+
+font-size:1.5rem;
+
+color:var(--primary);
+
+}
+
+/* ===================================
+        RESPONSIVE — HIRE SECTION
+=================================== */
+
+/* Fluid heading */
+.hire-left h2{
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+/* Tablet: ~992px */
+@media (max-width: 992px){
+
+  .hire{
+    padding: 100px 0;
+  }
+
+  .hire-wrapper{
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .hire-right{
+    order: -1; /* cards above the pitch text, or remove if you prefer text-first */
+  }
+
+  .social-links{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small tablet / large mobile: ~768px */
+@media (max-width: 768px){
+
+  .hire-right{
+    grid-template-columns: 1fr; /* stack cards */
+    gap: 20px;
+  }
+
+  .hire-card{
+    padding: 28px;
+  }
+
+  .hire-buttons{
+    flex-wrap: wrap;
+  }
+
+  .hire-buttons a,
+  .hire-buttons button{
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+/* Mobile: ~600px */
+@media (max-width: 600px){
+
+  .hire{
+    padding: 70px 0;
+  }
+
+  .hire-left p{
+    font-size: 1rem;
+  }
+
+  .hire-buttons{
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .hire-buttons a,
+  .hire-buttons button{
+    width: 100%;
+    padding: 15px 22px;
+  }
+
+  .hire-card{
+    padding: 24px;
+    border-radius: 18px;
+  }
+
+  .hire-card:hover{
+    transform: none; /* avoid touch hover glitches */
+  }
+
+  .hire-card span{
+    font-size: 1.7rem;
+    margin-bottom: 14px;
+  }
+
+  .social-links{
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 45px;
+  }
+
+  .social-links a{
+    padding: 18px;
+    font-size: .95rem;
+  }
+
+  .social-links a:hover{
+    transform: none;
+  }
+}
+
+/* Extra small: ~400px */
+@media (max-width: 400px){
+
+  .hire-left h2{
+    font-size: 1.9rem;
+  }
+
+  .hire-card h3{
+    font-size: 1.1rem;
+  }
+}
